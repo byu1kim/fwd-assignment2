@@ -1,0 +1,198 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Reset */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+  }
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	line-height: 1;
+	margin: 0;
+	/* Remove the below line of code... */
+	background-color: red;
+}
+
+p, li, a, b {
+	font-family: 'Merriweather', serif;
+}
+
+p {
+	line-height: 1.4;
+    margin: 0.9em 0;
+}
+
+/* Responsive Image Reset */
+
+img {
+	max-width: 100%;
+	height: auto;	
+}
+
+/* End Responsive Image Reset */
+
+/* End CSS Reset */
+
+/* Utility classes */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* End Utility classes */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Merriweather', serif;
+	font-weight: 700;
+	font-style: italic;
+	margin: 16px 0;	
+}
+
+h1 {
+	font-size: 1.5em;	
+}
+
+h2 {
+	font-size: 1.25em;	
+}
+
+header h1 {
+	margin: 0;
+	margin-right: auto;
+	font-size: 1.5em;
+	font-weight: 400;
+	margin-left: 10px;
+}
+
+header h1 a {
+	font-family: 'Pacifico', cursive;	
+	color: #9E0002;
+	text-decoration: none;		
+}
+
+
+.wrapper {
+	max-width: 960px;
+	padding: 0 30px;
+	margin: 0 auto;
+	background-color: white;	
+}
+
+header {
+	padding: 12px 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.logo {
+	width: 60px;
+} 
+
+.logo img {
+	display: block;	
+}
+
+.hamburger-menu {
+	/* 
+	*** NOTE: Delete the next lines of code and create a custom
+	Hamburger button as per the instructions... */
+	width: 60px;
+	height: 40px;
+	background-color: red;  
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.banner img,
+.gallery img {
+	display: block;	
+}
+
+.gallery-section {
+	padding-bottom: 30px;
+	border-bottom: 1px dotted #ccc;
+	margin-bottom: 30px;
+}
+
+.gallery-section h2 {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.gallery {
+	border: 5px solid orange;
+	padding: 20px;
+	max-width: 716px;
+	margin: 0 auto;
+}
+
+.gallery img {
+	width: 100%;
+}
+
+.gallery-item:first-child {
+	margin-bottom: 20px;
+}
+
+footer {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 0;
+	border-top: 1px dotted #ccc;	
+}
+
+@media (min-width: 560px){
+	.gallery {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.gallery-item {
+		width: 48%;
+	}
+
+	.gallery-item:first-child {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 640px) {
+	.featured-image {
+		width: 39%;
+		float: right;
+		margin-left: 20px;
+		margin-bottom: 20px;	
+	} 
+}
+
+@media (min-width: 760px) {
+
+
+}
+
+@media (min-width: 960px){
+	/* *** NOTE: Add the background image for the body here... */
+}
+
+
+
+
+
+
+
+
