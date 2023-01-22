@@ -1,17 +1,26 @@
 // JavaScript Document
 
-// Responsive Menu - Dropdown
 const body = document.body;
-const btnMenu = document.getElementById('btn-menu');
-const bar = document.getElementById('bar');
-const nav = document.getElementById('main-navigation');
+const btnMenu = document.getElementById("btn-menu");
+const bar = document.getElementById("bar");
+const nav = document.getElementById("main-navigation");
 
-btnMenu.addEventListener('click', openMenu);
-// Prevents the focus state from activating
-btnMenu.addEventListener('mousedown', function (e) {
+btnMenu.addEventListener("click", openMenu);
+btnMenu.addEventListener("mousedown", function (e) {
   e.preventDefault();
 });
 
 function openMenu() {
-  // Do some open/close nav stuff here...
+  body.classList.toggle("show");
+  nav.classList.add("activated");
+}
+
+const mql = window.matchMedia("(min-width: 560px)");
+mql.addListener(removeTransition);
+
+function removeTransition(e) {
+  if (e.matches) {
+    body.classList.remove("show");
+    nav.classList.remove("activated");
+  }
 }

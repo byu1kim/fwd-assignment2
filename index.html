@@ -53,7 +53,16 @@
       ------- spaceport-small.jpg *** 450 pixels wide
 
     -->
-          <img alt="Spaceport" src="images/spaceport-large.jpg" />
+          <img
+            alt="Spaceport"
+            src="images/spaceport-large.jpg"
+            srcset="
+              images/spaceport-large.jpg  1800w,
+              images/spaceport-medium.jpg  900w,
+              images/spaceport-small.jpg   450w
+            "
+            sizes="(max-width: 960px) calc(100vw - 60px), 900px"
+          />
         </div>
         <!-- end banner -->
         <div class="gallery-section">
@@ -81,7 +90,17 @@
           ------- holomenu-extra-small.jpg *** 300 pixels wide
 
         -->
-              <img alt="Holographic Menu" src="images/holomenu-medium.jpg" />
+              <img
+                alt="Holographic Menu"
+                src="images/holomenu-medium.jpg"
+                srcset="
+                  images/holomenu-large.jpg       1000w,
+                  images/holomenu-medium.jpg       700w,
+                  images/holomenu-small.jpg        500w,
+                  images/holomenu-extra-small.jpg  300w
+                "
+                sizes="(max-width: 559px) calc(100vw - 110px), (max-width: 776px) calc(49vw - 110px), 320px"
+              />
             </div>
             <!-- end gallery-item -->
             <div class="gallery-item">
@@ -106,7 +125,17 @@
           ------- vr-menu-extra-small.jpg *** 300 pixels wide
 
         -->
-              <img alt="Virtual Reality Menu" src="images/vr-menu-medium.jpg" />
+              <img
+                alt="Virtual Reality Menu"
+                src="images/vr-menu-medium.jpg"
+                srcset="
+                  images/vr-menu-large.jpg       1000w,
+                  images/vr-menu-medium.jpg       700w,
+                  images/vr-menu-small.jpg        500w,
+                  images/vr-menu-extra-small.jpg  300w
+                "
+                sizes="(max-width: 559px) calc(100vw - 110px), (max-width:776px) calc(49vw-110px), 320px"
+              />
             </div>
             <!-- end gallery-item -->
           </div>
@@ -129,11 +158,17 @@
           element. This is needed for the CSS
 
     -->
-          <img
-            class="featured-image"
-            src="images/float-menu-wide.jpg"
-            alt="Floating Menu System"
-          />
+          <picture>
+            <source
+              srcset="images/float-menu-closeup.jpg"
+              media="(max-width: 640px)"
+            />
+            <img
+              class="featured-image"
+              src="images/float-menu-wide.jpg"
+              alt="Floating Menu System"
+            />
+          </picture>
 
           <p>
             Look again at that dot. That's here. That's home. That's us. On it
